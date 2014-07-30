@@ -18,13 +18,13 @@ Include the required css and js file and call the plugin with the div object you
 That's the minimal use.
 
 "init" has several options:
-    {
+{
     width: default width of the chat box. Default 640
     height: default height of the chat box. Default 480
     user: name of the user that is accessing the chat from this page. Default Anonymous
     session: opentok session object. No default, required.
     onStart: a function you'd want to call when this is started. Default: doesn't do anything
-    }
+}
 
 ---
 Author: Javyer Derderian
