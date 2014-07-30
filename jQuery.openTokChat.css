@@ -1,0 +1,26 @@
+.openToKChatMain .messageContainer{
+	background-color: white;
+}
+
+.openToKChatMain .chatMessages {
+	    overflow:scroll;
+	    scroll:overflow;
+	    list-style: none;
+		padding-left: 0px;
+		margin-left: 1px;
+}
+
+.openToKChatMain .chatMessages li {
+		margin-left: 0px;
+		padding-left: 3px;
+}
+
+.systemMessage {
+	font-style: italic;
+	color:grey;
+}
+
+.chatMessages .userName { 
+	font-weight: bold;
+}
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+      openTokChat jQuery plugin
+  </title>
+
+</head>
+  <body>
+
+
+ <div class="container">
+
+      <div class="jumbotron">
+        <h1>Your Chat here</h1>
+        <div id="chatContainer" style="">
+        </div>
+      </div>
+
+      <div class="footer">
+        <p>&copy; Company 2014</p>
+      </div>
+
+    </div> 
+
+  </body>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+  <script src="http://static.opentok.com/webrtc/v2.2/js/opentok.min.js" ></script>
+
+  <script src="jQuery.openTokChat.js" ></script>
+
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="jQuery.openTokChat.css" />
+
+<script>
+  var session;
+  $(document).ready(function(){
+
+
+    //init regular opentok connection
+    var apiKey = '20822682'
+    var token = 'T1==cGFydG5lcl9pZD0yMDgyMjY4MiZzaWc9YWRkMDFmN2NlZjI4MDkyMTU4YjZjZTNkOTMyZGQ1YjBkNjM4OTQ1ODpyb2xlPXB1Ymxpc2hlciZzZXNzaW9uX2lkPTJfTVg0eU1EZ3lNalk0TW41LVZIVmxJRXAxYkNBeU9TQXhOem94Tmpvd01TQlFSRlFnTWpBeE5INHdMall4TVRZeU5EazJmbjQmY3JlYXRlX3RpbWU9MTQwNjY3OTUxMyZub25jZT0wLjIzOTEyNzg5NTQ2OTQzNDAzJmV4cGlyZV90aW1lPTE0MDY3NjU5MTI=';
+    var sessionId = '2_MX4yMDgyMjY4Mn5-VHVlIEp1bCAyOSAxNzoxNjowMSBQRFQgMjAxNH4wLjYxMTYyNDk2fn4'; 
+    
+    OT.setLogLevel(OT.DEBUG); // Set this for helpful debugging messages in console
+
+    session = OT.initSession(apiKey, sessionId);     
+
+    session.connect(token);
+
+
+    $("#chatContainer").openTokChat("init", {session:session,user:'Este'});
+  });
+</script>
+
+</html>
