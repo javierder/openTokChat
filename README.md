@@ -11,9 +11,13 @@ Keep in mind that the signaling framework has a cost.
 Usage
 ======
 
-Include the required css and js file and call the plugin with the div object you want to use as the parent for the chat box:
+Include the required css and js file and call the plugin with the div object you want to use as the parent for the chat box, and pass in the opentok session object:
 
     $("#chatContainer").openTokChat("init", {session:session});
+
+Make sure you session object is properly connected to the opentok service:
+    var session = OT.initSession(<opentok apiKey>, <opentok sessionId>);     
+    session.connect(<token for your sessionId>);
 
 That's the minimal use.
 

@@ -42,17 +42,18 @@
 
     //init regular opentok connection
     var apiKey = ''
-    var token = '';
     var sessionId = ''; 
+    var token = '';
     
     OT.setLogLevel(OT.DEBUG); // Set this for helpful debugging messages in console
 
-    session = OT.initSession(apiKey, sessionId);     
+    var session = OT.initSession(apiKey, sessionId);     
 
     session.connect(token);
 
+    var name = prompt("name?")
 
-    $("#chatContainer").openTokChat("init", {session:session,user:'Este'});
+    $("#chatContainer").openTokChat("init", {session:session, user:name});
   });
 </script>
 
